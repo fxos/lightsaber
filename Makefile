@@ -7,6 +7,7 @@ build_app=(cd apps/$(app) && npm install && bower install && npm run apm && gulp
 clean_app=(cd apps/$(app); gulp clean; rm -rf node_modules; rm -rf app/components/); \
 				 	rm -rf gaia/outoftree_apps/$(app);
 build=cp -r apps/customizer/app/fm/locales-obj apps/customizer/app/ && \
+	rm -f apps/FxOS-studio/.git/shallow && \
 	mkdir -p gaia/outoftree_apps/ && \
 	$(foreach app, $(APPS), $(build_app)) \
 	rm -rf gaia/outoftree_apps/FxOS-studio && \
