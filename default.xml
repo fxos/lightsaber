@@ -11,8 +11,8 @@
           review="github.com" />
 
   <project path="gaia" name="gaia" remote="mozilla-b2g" revision="lightsaber" />
-  <project path="sharing" name="sharing" remote="fxos" revision="master" />
-  <project path="directory" name="directory" remote="fxos" revision="master" />
-  <project path="customizer" name="customizer" remote="fxos" revision="master" />
-  <project path="FxOS-studio" name="FxOS-studio" remote="etiennesegonzac" revision="master" />
+  <project path="apps/sharing" name="sharing" remote="fxos" revision="master" />
+  <project path="apps/directory" name="directory" remote="fxos" revision="master" />
+  <project path="apps/customizer" name="customizer" remote="fxos" revision="master" />
+  <project path="apps/FxOS-studio" name="FxOS-studio" remote="etiennesegonzac" revision="master" />
 </manifest>
