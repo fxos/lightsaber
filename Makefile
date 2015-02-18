@@ -25,7 +25,8 @@ sync:
 	repo sync
 
 install:
-	repo init -u https://github.com/fxos/lightsaber.git
+	repo init -u https://github.com/fxos/lightsaber.git && \
+	sudo npm install -g bower && sudo npm install -g gulp
 
 clean:
 	$(foreach app, $(APPS), $(clean_app)) \
@@ -33,5 +34,4 @@ clean:
 	(cd gaia && make clean)
 
 really-clean:
-	make clean; \
 	rm -rf .repo gaia apps
