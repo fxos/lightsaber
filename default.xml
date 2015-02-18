@@ -10,6 +10,6 @@
   <project path="gaia" name="gaia" remote="mozilla-b2g" revision="lightsaber" />
   <project path="apps/sharing" name="sharing" remote="fxos" revision="master" />
   <project path="apps/directory" name="directory" remote="fxos" revision="master" />
-  <project path="apps/customizer" name="customizer" remote="fxos" revision="addon" />
+  <project path="apps/customizer" name="customizer" remote="fxos" revision="master" />
   <project path="apps/studio" name="studio" remote="fxos" revision="master" />
 </manifest>
