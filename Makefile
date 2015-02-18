@@ -1,6 +1,9 @@
 APPS=sharing directory customizer
 
-build_app=(cd apps/$(app) && npm install && bower install && npm run apm && gulp build && (([ -f custombuild ] && ./custombuild) || true)) && \
+build_app=(cd apps/$(app) && npm install && bower install && \
+	(([ "$(app)" == "sharing" ] && npm run apm) || true) && \
+	gulp build && \
+	(([ -f custombuild ] && ./custombuild) || true)) && \
 	rm -rf gaia/outoftree_apps/$(app) && \
 	mkdir -p gaia/outoftree_apps/$(app)/ && \
 	cp -r apps/$(app)/dist/app/ gaia/outoftree_apps/$(app)/ &&
@@ -26,7 +29,7 @@ sync:
 
 install:
 	./repo init -u https://github.com/fxos/lightsaber.git && \
-	sudo npm install -g bower && sudo npm install -g gulp
+	sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm
 
 clean:
 	$(foreach app, $(APPS), $(clean_app)) \
