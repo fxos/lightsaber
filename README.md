@@ -56,7 +56,7 @@ git clone https://github.com/fxos/lightsaber
 cd lightsaber
 make install
 make sync
-make reset-gaia
+GAIA_DEV_PIXELS_PER_PX=2.25 make reset-gaia
 ```
 
 ## That's all
@@ -72,7 +72,7 @@ git clone https://github.com/fxos/lightsaber
 cd lightsaber
 make install
 make sync
-DEVICE_DEBUG=1 NOFTU=1 make reset-gaia
+DEVICE_DEBUG=1 NOFTU=1 GAIA_DEV_PIXELS_PER_PX=2.25 make reset-gaia
 ```
 
 ## Install
