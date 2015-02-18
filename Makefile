@@ -22,10 +22,10 @@ reset-gaia:
 	$(build) && (cd gaia && make reset-gaia)
 
 sync:
-	repo sync
+	./repo sync
 
 install:
-	repo init -u https://github.com/fxos/lightsaber.git && \
+	./repo init -u https://github.com/fxos/lightsaber.git && \
 	sudo npm install -g bower && sudo npm install -g gulp
 
 clean:

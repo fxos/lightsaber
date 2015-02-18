@@ -3,9 +3,7 @@ Lightsaber build system for Gaia and custom apps. This tool is a wrapper for *re
 (https://code.google.com/p/git-repo/). It packages Lightsaber apps into a Gaia Lightsaber branch.
 
 # Quick setup
-1. If you're on OS X and have *brew*, run this: ```brew install repo```
-
-2. Install, build, and flash Lightsaber:
+Install, build, and flash Lightsaber (CAUTION: this will destroy your profile!)
 ```
 git clone https://github.com/fxos/lightsaber
 cd lightsaber
