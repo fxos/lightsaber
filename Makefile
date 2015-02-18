@@ -1,6 +1,8 @@
 APPS=sharing directory customizer
 
-build_app=(cd apps/$(app) && npm install && bower install && \
+build_app=(cd apps/$(app) && \
+	(([ -d app/fm/locales-obj ] && cp -r app/fm/locales-obj app/fm) || true) && \
+	npm install && bower install && \
 	(([ "$(app)" == "sharing" ] && npm run apm) || true) && \
 	gulp build && \
 	(([ -f custombuild ] && ./custombuild) || true)) && \
