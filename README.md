@@ -75,6 +75,13 @@ make sync
 DEVICE_DEBUG=1 NOFTU=1 GAIA_DEV_PIXELS_PER_PX=2.25 make reset-gaia
 ```
 
+## Quick update
+Only run this if you already have Lightsaber installed, and you want to update your Lightsaber Gaia branch and apps
+```
+make sync
+make install-gaia
+```
+
 ## Install
 ```
 git clone https://github.com/fxos/lightsaber
