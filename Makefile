@@ -8,7 +8,7 @@ build_app=(cd apps/$(app) && \
 	(([ -f custombuild ] && ./custombuild) || true)) && \
 	rm -rf gaia/outoftree_apps/$(app) && \
 	mkdir -p gaia/outoftree_apps/$(app)/ && \
-	cp -r apps/$(app)/dist/app/ gaia/outoftree_apps/$(app)/ &&
+	cp -r apps/$(app)/dist/app/* gaia/outoftree_apps/$(app)/ &&
 clean_app=(cd apps/$(app); gulp clean; rm -rf node_modules; rm -rf app/components/); \
 				 	rm -rf gaia/outoftree_apps/$(app);
 build=rm -f apps/studio/.git/shallow && \
