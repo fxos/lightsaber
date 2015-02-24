@@ -30,8 +30,7 @@ sync:
 	./repo sync
 
 install:
-	./repo init -u https://github.com/fxos/lightsaber.git && \
-	sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm
+	./repo init -u https://github.com/fxos/lightsaber.git
 
 clean:
 	$(foreach app, $(APPS), $(clean_app)) \
