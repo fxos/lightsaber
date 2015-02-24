@@ -10,6 +10,18 @@ If you haven't already, you should follow the general (B2G build instructions)[h
 ## Important note
 All paths here and beyond are relative to your user folder, ```~/```. If you are on OS X, you should be using a case sensitive image to store all of these files. For example, ```/Volumes/firefoxos```. For instructions on how to create this image, see [Mac file system case sensitivity](https://developer.mozilla.org/en-US/Firefox_OS/Firefox_OS_build_prerequisites#Be_aware_of_Mac_file_system_case_sensitivity).
 
+## Installing Dependencies
+### Linux only
+If you're on Linux, you must install the ```nodejs-legacy``` package, which symlinks ```node``` to ```nodejs```. Via apt-get:
+```
+sudo apt-get install nodejs-legacy
+```
+### Linux and OS X
+Install the node global dependencies:
+```
+sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm
+```
+
 ## Clone Cypress
 Cypress is the Gecko branch used for Lightsaber.
 ```
