@@ -91,7 +91,9 @@ These instructions are separate from installing Lightsaber on an Aries device. I
 
 ## Quick setup
 Install, build, and flash Lightsaber (CAUTION: this will destroy your profile!)
+If you're on Linux, first run ```sudo apt-get install nodejs-legacy```
 ```
+sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm
 git clone https://github.com/fxos/lightsaber
 cd lightsaber
 make install
