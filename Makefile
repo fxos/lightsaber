@@ -11,7 +11,8 @@ build_app=(cd apps/$(app) && \
 	cp -r apps/$(app)/dist/app/* gaia/outoftree_apps/$(app)/ &&
 clean_app=(cd apps/$(app); gulp clean; rm -rf node_modules; rm -rf app/components/); \
 				 	rm -rf gaia/outoftree_apps/$(app);
-build=rm -f apps/studio/.git/shallow && \
+build=sudo ln -sf /usr/bin/nodejs /usr/bin/node && \
+	rm -f apps/studio/.git/shallow && \
 	mkdir -p gaia/outoftree_apps/ && \
 	$(foreach app, $(APPS), $(build_app)) \
 	rm -rf gaia/outoftree_apps/studio && \
