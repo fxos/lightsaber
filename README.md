@@ -59,6 +59,18 @@ make sync
 GAIA_DEV_PIXELS_PER_PX=2.25 make reset-gaia
 ```
 
+## Set the javascript.options.discardSystemSource pref
+We're not sure why this is needed yet, but probably because RequireJS uses ```function.toSource()``` calls.
+```
+cd B2G
+./edit_prefs.sh
+```
+Navigate to the bottom, and add this line:
+```
+user_pref("javascript.options.discardSystemSource", false);
+```
+Save the file using your editor, and close it, and your device should reboot.
+
 ## That's all
 You should now have a device, running Lightsaber, to play around with.
 
