@@ -74,6 +74,8 @@ GAIA_DEV_PIXELS_PER_PX=2.25 make reset-gaia
 ```
 
 ## Set the javascript.options.discardSystemSource pref
+**You must perform this step, or the custom apps will not work.**
+
 We're not sure why this is needed yet, but probably because RequireJS uses ```function.toSource()``` calls.
 ```
 cd B2G
