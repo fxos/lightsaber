@@ -20,6 +20,9 @@ build=rm -f apps/studio/.git/shallow && \
 hellomake:
 	$(build) && (cd gaia && make)
 
+shallow:
+	$(build)
+
 install-gaia:
 	$(build) && (cd gaia && make install-gaia)
 
