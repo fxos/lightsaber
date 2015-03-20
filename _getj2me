@@ -1,0 +1,93 @@
+#! /usr/bin/env node --harmony
+
+const APP_HOST = 'marketplace.firefox.com';
+const APP_PATH = '/app/f2ed31a0-05ed-416b-ac0d-0f26db063839/manifest.webapp';
+
+const PACKAGE_PATH = 'apps/j2me/';
+const PREFIX = '[j2me]';
+
+var https = require('https');
+var exec = require('child_process').exec;
+var spawn = require('child_process').spawn;
+var url = require('url');
+var fs = require('fs');
+
+var package;
+
+var begin = function() {
+  console.log(PREFIX, 'Starting app download process.');
+  cleanFolder();
+};
+
+var cleanFolder = function() {
+  console.log(PREFIX, 'Cleaning folder.');
+
+  var child = exec('rm -rf ' + PACKAGE_PATH, function(err, out) {
+    console.log(PREFIX, 'Cleaned folder.');
+    downloadManifest();
+  });
+};
+
+var downloadManifest = function() {
+  console.log(PREFIX, 'Downloading manifest...');
+
+  var options = {
+    host: APP_HOST,
+    path: APP_PATH
+  };
+
+  var callback = function(response) {
+    var manifest = '';
+
+    response.on('data', function(chunk) {
+      console.log(PREFIX, '...');
+      manifest += chunk;
+    });
+
+    response.on('end', function() {
+      console.log(PREFIX, 'Downloaded manifest.');
+      downloadPackage(JSON.parse(manifest));
+    })
+  };
+
+  https.request(options, callback).end();
+}
+
+var downloadPackage = function(manifest) {
+  console.log(PREFIX, 'Downloading package...');
+  package = manifest.package_path;
+  package = package.substring(package.lastIndexOf('/') + 1);
+  var wget = 'wget -P apps/j2me ' + manifest.package_path;
+  var child = exec(wget, function(err, stdout, stderr) {
+    if (err) {
+      console.log(PREFIX, 'Error downloading package.');
+      throw err;
+    } else {
+      console.log(PREFIX, 'Downloaded package.');
+      unzipPackage();
+    }
+  });
+};
+
+var unzipPackage = function() {
+  console.log(PREFIX, 'Unzipping package.');
+  var child = spawn('unzip', [PACKAGE_PATH + package, '-d', PACKAGE_PATH]);
+  child.on('exit', function(code) {
+    console.log(PREFIX, 'Unzipped package.');
+    deletePackage();
+  });
+};
+
+var deletePackage = function() {
+  console.log(PREFIX, 'Deleting package.');
+  fs.unlinkSync(PACKAGE_PATH + package);
+  console.log(PREFIX, 'Deleted package.');
+
+  done();
+}
+
+var done = function() {
+  console.log(PREFIX, 'Done app download process.');
+};
+
+begin();

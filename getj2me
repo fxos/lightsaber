@@ -1,0 +1,2 @@
+#!/bin/sh
+node --harmony ./_getj2me
