@@ -24,6 +24,9 @@ copy_app=rm -rf gaia/outoftree_apps/$(app) && \
 hellomake:
 	$(build) && (cd gaia && make)
 
+shallow:
+	$(build)
+
 install-gaia:
 	$(build) && (cd gaia && make install-gaia)
 
