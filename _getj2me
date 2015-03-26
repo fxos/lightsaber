@@ -11,6 +11,7 @@ var exec = require('child_process').exec;
 var spawn = require('child_process').spawn;
 var url = require('url');
 var fs = require('fs');
+var path = require('path');
 
 var package;
 
@@ -55,10 +56,10 @@ var downloadManifest = function() {
 
 var downloadPackage = function(manifest) {
   console.log(PREFIX, 'Downloading package...');
-  package = manifest.package_path;
-  package = package.substring(package.lastIndexOf('/') + 1);
-  var wget = 'wget -P apps/j2me ' + manifest.package_path;
-  var child = exec(wget, function(err, stdout, stderr) {
+  var parsed_url = url.parse(manifest.package_path);
+  package = path.basename(parsed_url.pathname);
+  var curl = 'curl --create-dirs -o apps/j2me/' + package + ' ' + manifest.package_path;
+  var child = exec(curl, function(err, stdout, stderr) {
     if (err) {
       console.log(PREFIX, 'Error downloading package.');
       throw err;
