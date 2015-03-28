@@ -6,10 +6,20 @@
   <remote name="fxos"
           fetch="https://github.com/fxos/"
           review="github.com" />
+  <remote name="mozilla"
+          fetch="https://github.com/mozilla/"
+          review="github.com" />
+  <!-- to be removed once bug 1148634 and bug 1148643 land -->
+  <remote name="DouglasSherk"
+          fetch="https://github.com/DouglasSherk/"
+          review="github.com" />
 
   <project path="gaia" name="gaia" remote="mozilla-b2g" revision="lightsaber" />
   <project path="apps/sharing" name="sharing" remote="fxos" revision="master" />
   <project path="apps/directory" name="directory" remote="fxos" revision="master" />
   <project path="apps/customizer" name="customizer" remote="fxos" revision="master" />
   <project path="apps/studio" name="studio" remote="fxos" revision="master" />
+  <project path="apps/loop" name="firefoxos-loop-client" remote="DouglasSherk" revision="master" />
+  <project path="apps/buddyup" name="buddyup" remote="DouglasSherk" revision="metadata" />
+  <project path="preload-app-toolkit" name="preload-app-toolkit" remote="mozilla-b2g" revision="master" />
 </manifest>
