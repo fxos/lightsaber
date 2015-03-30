@@ -25,11 +25,15 @@ clean_grunt_app=(cd apps/$(app); rm -rf node_modules; rm -rf build); \
 simple_clean_app=rm -rf gaia/outoftree_apps/$(app);
 
 build=rm -f apps/studio/.git/shallow && \
+	$(copy_assets) && \
 	mkdir -p gaia/outoftree_apps/ && \
 	$(foreach app, $(BOWER_APPS), $(build_bower_app)) \
 	$(foreach app, $(GRUNT_APPS), $(build_grunt_app)) \
 	$(foreach app, $(NO_BUILD_APPS), $(copy_app)) \
 	$(copy_external_apps)
+
+copy_assets=cp default-homescreens.json gaia/apps/verticalhome/build/ && \
+						cp wallpaper@2.25x.jpg gaia/build/config/
 
 # Copies apps that we download and preload directly from Marketplace.
 copy_external_apps=find preload-app-toolkit/ -type d -maxdepth 1 \
