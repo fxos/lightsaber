@@ -21,7 +21,7 @@ sudo apt-get install nodejs-legacy
 ### Linux and OS X
 Install the node global dependencies:
 ```
-sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm
+sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm && sudo npm install -g grunt-cli
 ```
 
 ## Clone Cypress
@@ -97,7 +97,7 @@ These instructions are separate from installing Lightsaber on an Aries device. I
 Install, build, and flash Lightsaber (CAUTION: this will destroy your profile!)
 If you're on Linux, first run ```sudo apt-get install nodejs-legacy```
 ```
-sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm
+sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm && sudo npm install -g grunt-cli
 git clone https://github.com/fxos/lightsaber
 cd lightsaber
 make install
