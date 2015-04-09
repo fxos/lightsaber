@@ -3,7 +3,7 @@ GRUNT_APPS=loop
 NO_BUILD_APPS=studio buddyup
 
 build_bower_app=(cd apps/$(app) && \
-	npm install && bower install && bower update && \
+	npm install && bower $(BOWER_FLAGS) install && bower $(BOWER_FLAGS) update && \
 	(([ "$(app)" = "sharing" ] && npm run apm) || true) && \
 	gulp build && \
 	(([ -f custombuild ] && ./custombuild) || true)) && \
