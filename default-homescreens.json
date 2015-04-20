@@ -12,7 +12,8 @@
     ], [
       ["outoftree_apps", "directory"],
       ["outoftree_apps", "sharing"],
-      ["outoftree_apps", "studio"]
+      ["outoftree_apps", "studio"],
+      ["outoftree_apps", "webmaker-app"]
     ], [
       ["outoftree_apps", "twitter"],
       ["outoftree_apps", "facebook"],

@@ -21,5 +21,6 @@
   <project path="apps/studio" name="studio" remote="fxos" revision="master" />
   <project path="apps/loop" name="firefoxos-loop-client" remote="DouglasSherk" revision="master" />
   <project path="apps/buddyup" name="buddyup" remote="DouglasSherk" revision="metadata" />
+  <project path="apps/webmaker-app" name="webmaker-app" remote="mozilla" revision="master" />
   <project path="preload-app-toolkit" name="preload-app-toolkit" remote="mozilla-b2g" revision="master" />
 </manifest>
