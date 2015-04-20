@@ -86,6 +86,13 @@ make sync
 GAIA_DEV_PIXELS_PER_PX=2.25 make reset-gaia
 ```
 
+## Enable Developer Mode
+```
+adb shell "stop b2g"
+adb shell "cd /data/b2g/mozilla/*.default/;echo 'user_pref(\"dom.apps.developer_mode\", true);' >> prefs.js;"
+adb shell "start b2g"
+```
+
 ## Set the javascript.options.discardSystemSource pref
 **You must perform this step, or the custom apps will not work.**
 
