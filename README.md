@@ -58,8 +58,9 @@ There are some patches that have not yet landed on Cypress:
 Download these patches to your `~/cypress` folder and apply them from the `~/cypress` folder:
 
 ```
-patch -p1 < bug1123846.patch
-patch -p1 < bug1150106.patch
+hg qimport bug1123846.patch
+hg qimport bug1150106.patch
+hg qpush -a
 ```
 
 ## Acquire binaries and build
