@@ -27,7 +27,7 @@ sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm
 ## Clone Cypress
 Cypress is the Gecko branch used for Lightsaber.
 ```
-hg clone ssh://hg.mozilla.org/projects/cypress ~/cypress
+hg clone https://hg.mozilla.org/projects/cypress ~/cypress
 ```
 
 ## Setup B2G repository
