@@ -21,7 +21,7 @@ sudo apt-get install nodejs-legacy
 ### Linux and OS X
 Install the node global dependencies:
 ```
-sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm && sudo npm install -g grunt-cli
+sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm && sudo npm install -g grunt-cli && sudo npm install -g browserify
 ```
 
 ## Clone Cypress
