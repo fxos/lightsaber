@@ -84,7 +84,7 @@ git clone https://github.com/fxos/lightsaber
 cd lightsaber
 make install
 make sync
-GAIA_DEV_PIXELS_PER_PX=2.25 DEVICE_DEBUG=1 make reset-gaia
+GAIA_DEV_PIXELS_PER_PX=2.25 DEVICE_DEBUG=1 MOZILLA_OFFICIAL=1 make reset-gaia
 ```
 
 ## Enable Developer Mode
@@ -104,7 +104,7 @@ These instructions are separate from installing Lightsaber on an Aries device. I
 Install, build, and flash Lightsaber (CAUTION: this will destroy your profile!)
 If you're on Linux, first run ```sudo apt-get install nodejs-legacy```
 ```
-sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm && sudo npm install -g grunt-cli
+sudo npm install -g bower && sudo npm install -g gulp && sudo npm install -g apm && sudo npm install -g grunt-cli && sudo npm install -g browserify
 git clone https://github.com/fxos/lightsaber
 cd lightsaber
 make install
