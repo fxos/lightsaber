@@ -1,4 +1,4 @@
-GULP_APPS=sharing directory customizer webmaker-app
+GULP_APPS=achievements sharing directory customizer webmaker-app
 GRUNT_APPS=loop
 NO_BUILD_APPS=studio buddyup
 

@@ -12,6 +12,7 @@
     ], [
       ["outoftree_apps", "directory"],
       ["outoftree_apps", "sharing"],
+      ["outoftree_apps", "achievements"],
       ["outoftree_apps", "studio"],
       ["outoftree_apps", "webmaker-app"]
     ], [
