@@ -5,3 +5,6 @@ twitter,https://mobile.twitter.com/cache/twitter.webapp
 sechelt,https://fxos.github.io/sechelt/manifest.webapp
 yammer,https://fxos.github.io/yammer/manifest.webapp
 hexgl,https://fxos.github.io/HexGL/manifest.webapp
+foxfooding,https://fxos.github.io/foxfooding/manifest.webapp
+calculator,https://marketplace.firefox.com/app/9f96ce77-5b2d-42ca-a0d9-10a933dd84c4/manifest.webapp
+notes,https://marketplace.firefox.com/app/dcdaeefc-26f4-4af6-ad22-82eb93beadcd/manifest.webapp
