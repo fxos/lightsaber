@@ -1,4 +1,4 @@
-GULP_APPS=achievements sharing directory customizer
+GULP_APPS=achievements sharing directory customizer customizer-launcher
 NO_BUILD_APPS=studio
 
 build_gulp_app=(cd apps/$(app) && \

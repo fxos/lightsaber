@@ -14,7 +14,8 @@
       ["outoftree_apps", "sharing"],
       ["outoftree_apps", "achievements"],
       ["outoftree_apps", "studio"],
-      ["outoftree_apps", "webmaker-app"]
+      ["outoftree_apps", "webmaker-app"],
+      ["outoftree_apps", "customizer-launcher"]
     ], [
       ["outoftree_apps", "twitter"],
       ["outoftree_apps", "facebook"],

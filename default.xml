@@ -10,6 +10,7 @@
   <project path="gaia" name="gaia" remote="mozilla-b2g" revision="master" />
   <project path="apps/achievements" name="achievements" remote="fxos" revision="master" />
   <project path="apps/customizer" name="customizer" remote="fxos" revision="master" />
+  <project path="apps/customizer-launcher" name="customizer-launcher" remote="fxos" revision="master" />
   <project path="apps/directory" name="directory" remote="fxos" revision="master" />
   <project path="apps/sharing" name="sharing" remote="fxos" revision="master" />
   <project path="apps/studio" name="studio" remote="fxos" revision="master" />
