@@ -49,20 +49,6 @@ B2G must be configured for the Aries device
 ./config.sh aries
 ```
 
-## Apply Gecko patches
-There are some patches that have not yet landed on Cypress:
-
-* https://bugzilla.mozilla.org/show_bug.cgi?id=1123846
-* https://bugzilla.mozilla.org/show_bug.cgi?id=1150106
-
-Download these patches to your `~/cypress` folder and apply them from the `~/cypress` folder:
-
-```
-hg qimport bug1123846.patch
-hg qimport bug1150106.patch
-hg qpush -a
-```
-
 ## Acquire binaries and build
 You must now acquire the device binaries using the ```./build.sh``` tool:
 ```
