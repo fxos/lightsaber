@@ -4,9 +4,7 @@ NO_BUILD_APPS=studio
 build_gulp_app=(cd apps/$(app) && \
 	npm install && \
 	(([ -f bower.json ] && bower $(BOWER_FLAGS) install && bower $(BOWER_FLAGS) update) || true) && \
-	(([ "$(app)" = "sharing" ] && npm run apm) || true) && \
-	gulp build && \
-	(([ -f custombuild ] && ./custombuild) || true)) && \
+	npm run build) && \
 	rm -rf gaia/outoftree_apps/$(app) && \
 	mkdir -p gaia/outoftree_apps/$(app)/ && \
 	(([ -d apps/$(app)/dist/app ] && cp -r apps/$(app)/dist/app/* gaia/outoftree_apps/$(app)/) || \
